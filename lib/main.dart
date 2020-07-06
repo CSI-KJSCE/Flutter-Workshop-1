@@ -48,16 +48,6 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Container(
-                        height: 110,
-                        width: 110,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    ),
-                    Align(
                       alignment: Alignment.centerLeft,
                       child: Container(
                         height: 100,
