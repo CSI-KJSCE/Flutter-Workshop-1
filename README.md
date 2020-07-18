@@ -1,16 +1,18 @@
-# introapp
+## Flutter-Workshop-1
 
-A new Flutter application.
+this repo consists of the starting and the final source code for App Development using Flutter workshop 2020
+<br>
 
-## Getting Started
+To clone it:
 
-This project is a starting point for a Flutter application.
+  git clone https://github.com/CSI-KJSCE/Flutter-Workshop-1.git
+   
 
-A few resources to get you started if this is your first Flutter project:
+<br>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Once cloned, open the project on your IDE.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+------------------------------------------
+<div align="center">
+Made with :heart: by <a href="https://github.com/CSI-KJSCE" target="_blank">CSI KJSCE</a>
+</div>
