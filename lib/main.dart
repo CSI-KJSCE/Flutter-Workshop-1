@@ -15,8 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
+      theme: ThemeData(fontFamily:'Proxima Nova'),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,9 +27,15 @@ class MyApp extends StatelessWidget {
               alignment: Alignment.topCenter,
               child: Container(
                 width: double.infinity,
-                margin: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
                 decoration: BoxDecoration(
-                    color: Color(0xff303030),
+                    // color: Color(0xff303030),
+                    //gradient: LinearGradient(colors:[Color(0xffbdc3c7),Color(0xff2c3e50)]),
+                    //color: Color.fromRGBO(255, 0, 0, 1),
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [Color(0xfff4624a), Color(0xffea2893)]),
                     boxShadow: [
                       BoxShadow(
                           color: Colors.black,
@@ -75,8 +83,9 @@ class MyApp extends StatelessWidget {
                               child: Text(
                                 "Aditya Tawade",
                                 style: TextStyle(
-                                    fontFamily: "Sans",
+                                    fontFamily: "Proxima Nova",
                                     fontSize: 35,
+                                    fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),
                             ),
@@ -84,7 +93,7 @@ class MyApp extends StatelessWidget {
                                 margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
                                 child: Text("CS undergrad",
                                     style: TextStyle(
-                                        fontSize: 15, color: Colors.white)))
+                                        fontSize: 20, color: Colors.white)))
                           ],
                         ),
                       ),
@@ -94,23 +103,27 @@ class MyApp extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 0,
             ),
             Align(
               alignment: Alignment.center,
               child: Container(
 //                height: 140,
                 width: 400,
-                margin: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
                 padding: EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: Colors.grey[700],
+                    // color: Colors.grey[700],
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [Color(0xffea2893), Color(0xff9700b2)]),
                     boxShadow: [
                       BoxShadow(
                           color: Colors.black,
                           blurRadius: 3,
-                          spreadRadius: 0.5,
+                          spreadRadius: 1,
                           offset: Offset(0, 2))
                     ]),
                 child: Column(
@@ -122,13 +135,14 @@ class MyApp extends StatelessWidget {
                         width: double.infinity,
                         height: 30,
                         decoration: titledecoration,
-                        margin: EdgeInsets.only(top: 5, left: 10),
+                        margin: EdgeInsets.only(top: 10, left: 10),
                         child: Text(
                           "About Me:",
                           textAlign: TextAlign.center,
                           style: TextStyle(
 //                              fontFamily: 'Montserrat',
                               fontSize: 25,
+                              fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
                       ),
@@ -138,7 +152,8 @@ class MyApp extends StatelessWidget {
                       height: 140,
                       padding: EdgeInsets.all(20),
 //                      margin: EdgeInsets.only(top: 5, left: 10, right: 10),
-                      child: Center(
+                      child: Align(
+                        alignment: Alignment.topCenter,
                         child: Text(
                           "Hi There! this is supposed to be my Bio and write whatever I like",
                           style: TextStyle(fontSize: 20, color: Colors.white),
@@ -150,21 +165,26 @@ class MyApp extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 0,
             ),
             Align(
               alignment: Alignment.center,
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                margin: EdgeInsets.all(10),
+                margin:
+                    EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 2),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: Colors.orange[800],
+                    // color: Colors.orange[700],
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [Color(0xff9700b2), Color(0xff4f2ac4)]),
                     boxShadow: [
                       BoxShadow(
                           color: Colors.black,
                           blurRadius: 3,
-                          spreadRadius: 0.5,
+                          spreadRadius: 1,
                           offset: Offset(0, 2))
                     ]),
                 child: Column(
@@ -182,17 +202,15 @@ class MyApp extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 25,
                             color: Colors.white,
+                            fontWeight: FontWeight.bold
                           ),
                           textAlign: TextAlign.center,
                         ),
                       ),
                     ),
-                    InfoBox("1234567890", Icons.phone, Colors.orange[800], 15,
-                        50, 380),
-                    InfoBox("rohanajm@gmail.com", Icons.email,
-                        Colors.orange[800], 15, 50, 380),
-                    InfoBox("rohanajm7", FontAwesomeIcons.github,
-                        Colors.orange[800], 15, 50, 380),
+                    InfoBox("1234567890", Icons.phone),
+                    InfoBox("rohanajm@gmail.com", Icons.email),
+                    InfoBox("rohanajm7", FontAwesomeIcons.github),
                   ],
                 ),
               ),

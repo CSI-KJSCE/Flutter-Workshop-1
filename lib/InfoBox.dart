@@ -4,23 +4,20 @@ import 'package:flutter/material.dart';
 class InfoBox extends StatelessWidget {
   final String text1;
   final icon;
-  final Color colour;
-  final double fontSize1;
-  final double height1;
-  final double width1;
-  InfoBox(this.text1, this.icon, this.colour, this.fontSize1, this.height1,
-      this.width1);
+  
+  InfoBox(this.text1, this.icon);
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.center,
       child: Container(
-        height: height1,
-        width: width1,
+        height: 50,
+        width: 380,
         margin: EdgeInsets.only(top: 6),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: colour,
+          // color: Colors.orange[800],
+         
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -34,21 +31,21 @@ class InfoBox extends StatelessWidget {
                       blurRadius: 4.0,
                       spreadRadius: 1.0,
                       color: Color(0xff000000)),
-                  BoxShadow(
-                      offset: Offset(-2.0, -3.0),
-                      blurRadius: 4.0,
-                      spreadRadius: 1.0,
-                      color: Color(0xfff0f0f0))
+                  // BoxShadow(
+                  //     offset: Offset(-2.0, -3.0),
+                  //     blurRadius: 4.0,
+                  //     spreadRadius: 1.0,
+                  //     color: Color(0xfff0f0f0))
                 ]),
                 child: RawMaterialButton(
                   onPressed: () {},
                   elevation: 0.0,
-                  fillColor: colour,
+                  fillColor: Color(0xffffffff),
                   child: Align(
                     alignment: Alignment.center,
                     child: Icon(
                       icon,
-                      color: Colors.white,
+                      color: Color(0xff000000),
                       size: 20,
                     ),
                   ),
@@ -69,7 +66,7 @@ class InfoBox extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     //fontFamily: 'Montserrat',
-                    fontSize: fontSize1,
+                    fontSize: 20,
                     color: Colors.white),
               ),
             )
