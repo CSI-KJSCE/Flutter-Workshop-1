@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class InfoBox extends StatelessWidget {
   final String text1;
-  final icon;
-  
+  final IconData icon;
+
   InfoBox(this.text1, this.icon);
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,6 @@ class InfoBox extends StatelessWidget {
         margin: EdgeInsets.only(top: 6),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
-          // color: Colors.orange[800],
-         
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -31,21 +29,16 @@ class InfoBox extends StatelessWidget {
                       blurRadius: 4.0,
                       spreadRadius: 1.0,
                       color: Color(0xff000000)),
-                  // BoxShadow(
-                  //     offset: Offset(-2.0, -3.0),
-                  //     blurRadius: 4.0,
-                  //     spreadRadius: 1.0,
-                  //     color: Color(0xfff0f0f0))
                 ]),
                 child: RawMaterialButton(
                   onPressed: () {},
                   elevation: 0.0,
-                  fillColor: Color(0xffffffff),
+                  fillColor: Color(0xff000000),
                   child: Align(
                     alignment: Alignment.center,
                     child: Icon(
                       icon,
-                      color: Color(0xff000000),
+                      color: Color(0xffea2893),
                       size: 20,
                     ),
                   ),
@@ -64,10 +57,7 @@ class InfoBox extends StatelessWidget {
               child: Text(
                 text1,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                    //fontFamily: 'Montserrat',
-                    fontSize: 20,
-                    color: Colors.white),
+                style: TextStyle(fontSize: 15, color: Colors.white),
               ),
             )
           ],
