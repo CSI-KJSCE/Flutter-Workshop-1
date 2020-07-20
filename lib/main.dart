@@ -27,9 +27,10 @@ class HomeRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
           backgroundColor: Color(0xffea2893),
-          child: Icon(Icons.arrow_forward_ios),
+          icon: Icon(Icons.call),
+          label: Text('CONTACT ME'),
           onPressed: () {
             Navigator.push(
               context,

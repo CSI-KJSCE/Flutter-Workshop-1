@@ -8,9 +8,10 @@ class SecondRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
           backgroundColor: Color(0xffea2893),
-          child: Icon(Icons.arrow_back_ios),
+          icon: Icon(Icons.account_circle),
+          label: Text('INFO'),
           onPressed: () {
             Navigator.pop(context);
           }),
